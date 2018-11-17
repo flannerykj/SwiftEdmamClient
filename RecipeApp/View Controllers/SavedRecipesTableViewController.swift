@@ -11,6 +11,7 @@ import UIKit
 class SavedRecipesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
+        print("loaded saved recipes")
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations

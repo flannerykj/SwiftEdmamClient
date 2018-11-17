@@ -19,6 +19,10 @@
 		9549679B21A0927D0029E582 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679A21A0927D0029E582 /* AppState.swift */; };
 		9549679D21A092860029E582 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679C21A092860029E582 /* AppReducer.swift */; };
 		95966F3D21A095B600EECD11 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95966F3C21A095B600EECD11 /* Keys.plist */; };
+		95966F3F21A0993D00EECD11 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F3E21A0993D00EECD11 /* AppRouter.swift */; };
+		95966F4121A099F700EECD11 /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4021A099F700EECD11 /* RoutingState.swift */; };
+		95966F4321A09A9400EECD11 /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4221A09A9400EECD11 /* RoutingReducer.swift */; };
+		95966F4521A09C1B00EECD11 /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4421A09C1B00EECD11 /* RoutingAction.swift */; };
 		F6CD827EE9E15DD2F0488367 /* Pods_RecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFB9646388BB2B0E58F4C90 /* Pods_RecipeApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,10 @@
 		9549679A21A0927D0029E582 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		9549679C21A092860029E582 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		95966F3C21A095B600EECD11 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		95966F3E21A0993D00EECD11 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		95966F4021A099F700EECD11 /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
+		95966F4221A09A9400EECD11 /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
+		95966F4421A09C1B00EECD11 /* RoutingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +92,11 @@
 		9549677921A08D520029E582 /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
-				9549679621A092590029E582 /* Store */,
-				9549679321A092130029E582 /* View Controllers */,
 				9549677A21A08D520029E582 /* AppDelegate.swift */,
 				9549678C21A08D6B0029E582 /* Config.swift */,
+				95966F3E21A0993D00EECD11 /* AppRouter.swift */,
+				9549679621A092590029E582 /* Store */,
+				9549679321A092130029E582 /* View Controllers */,
 				9549678E21A08DE90029E582 /* Network */,
 				9549677C21A08D520029E582 /* ViewController.swift */,
 				9549677E21A08D520029E582 /* Main.storyboard */,
@@ -130,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9549679C21A092860029E582 /* AppReducer.swift */,
+				95966F4221A09A9400EECD11 /* RoutingReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 		9549679821A092670029E582 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				95966F4421A09C1B00EECD11 /* RoutingAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				9549679A21A0927D0029E582 /* AppState.swift */,
+				95966F4021A099F700EECD11 /* RoutingState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -276,9 +288,13 @@
 			files = (
 				9549679021A08DFA0029E582 /* NetworkManager.swift in Sources */,
 				9549677D21A08D520029E582 /* ViewController.swift in Sources */,
+				95966F4321A09A9400EECD11 /* RoutingReducer.swift in Sources */,
 				9549679B21A0927D0029E582 /* AppState.swift in Sources */,
 				9549679221A08E230029E582 /* EdmamAPI.swift in Sources */,
+				95966F4121A099F700EECD11 /* RoutingState.swift in Sources */,
+				95966F3F21A0993D00EECD11 /* AppRouter.swift in Sources */,
 				9549679521A0924A0029E582 /* SavedRecipesTableViewController.swift in Sources */,
+				95966F4521A09C1B00EECD11 /* RoutingAction.swift in Sources */,
 				9549677B21A08D520029E582 /* AppDelegate.swift in Sources */,
 				9549679D21A092860029E582 /* AppReducer.swift in Sources */,
 				9549678D21A08D6B0029E582 /* Config.swift in Sources */,

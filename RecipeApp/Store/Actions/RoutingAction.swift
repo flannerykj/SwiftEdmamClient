@@ -1,5 +1,5 @@
 //
-//  AppState.swift
+//  RoutingAction.swift
 //  RecipeApp
 //
 //  Created by Flannery Jefferson on 2018-11-17.
@@ -9,6 +9,6 @@
 import Foundation
 import ReSwift
 
-struct AppState: StateType {
-    let routingState: RoutingState
+struct RoutingAction: Action {
+    let destination: RoutingDestination
 }

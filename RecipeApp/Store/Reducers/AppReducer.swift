@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import ReSwift
+
+func appReducer(action: Action, appState: AppState?) -> AppState {
+  return AppState(
+    routingState: routingReducer(action: action, state: appState?.routingState)
+    )
+}
