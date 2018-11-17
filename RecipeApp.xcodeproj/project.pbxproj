@@ -12,6 +12,13 @@
 		9549678021A08D520029E582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9549677E21A08D520029E582 /* Main.storyboard */; };
 		9549678221A08D540029E582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9549678121A08D540029E582 /* Assets.xcassets */; };
 		9549678521A08D540029E582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9549678321A08D540029E582 /* LaunchScreen.storyboard */; };
+		9549678D21A08D6B0029E582 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549678C21A08D6B0029E582 /* Config.swift */; };
+		9549679021A08DFA0029E582 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549678F21A08DFA0029E582 /* NetworkManager.swift */; };
+		9549679221A08E230029E582 /* EdmamAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679121A08E230029E582 /* EdmamAPI.swift */; };
+		9549679521A0924A0029E582 /* SavedRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679421A0924A0029E582 /* SavedRecipesTableViewController.swift */; };
+		9549679B21A0927D0029E582 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679A21A0927D0029E582 /* AppState.swift */; };
+		9549679D21A092860029E582 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679C21A092860029E582 /* AppReducer.swift */; };
+		95966F3D21A095B600EECD11 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95966F3C21A095B600EECD11 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		9549678121A08D540029E582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9549678421A08D540029E582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9549678621A08D540029E582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9549678C21A08D6B0029E582 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9549678F21A08DFA0029E582 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9549679121A08E230029E582 /* EdmamAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdmamAPI.swift; sourceTree = "<group>"; };
+		9549679421A0924A0029E582 /* SavedRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewController.swift; sourceTree = "<group>"; };
+		9549679A21A0927D0029E582 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		9549679C21A092860029E582 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		95966F3C21A095B600EECD11 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,69 @@
 		9549677921A08D520029E582 /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				9549679621A092590029E582 /* Store */,
+				9549679321A092130029E582 /* View Controllers */,
 				9549677A21A08D520029E582 /* AppDelegate.swift */,
+				9549678C21A08D6B0029E582 /* Config.swift */,
+				9549678E21A08DE90029E582 /* Network */,
 				9549677C21A08D520029E582 /* ViewController.swift */,
 				9549677E21A08D520029E582 /* Main.storyboard */,
 				9549678121A08D540029E582 /* Assets.xcassets */,
 				9549678321A08D540029E582 /* LaunchScreen.storyboard */,
 				9549678621A08D540029E582 /* Info.plist */,
+				95966F3C21A095B600EECD11 /* Keys.plist */,
 			);
 			path = RecipeApp;
+			sourceTree = "<group>";
+		};
+		9549678E21A08DE90029E582 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9549678F21A08DFA0029E582 /* NetworkManager.swift */,
+				9549679121A08E230029E582 /* EdmamAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9549679321A092130029E582 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9549679421A0924A0029E582 /* SavedRecipesTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9549679621A092590029E582 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				9549679921A0926C0029E582 /* State */,
+				9549679821A092670029E582 /* Actions */,
+				9549679721A092610029E582 /* Reducers */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		9549679721A092610029E582 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				9549679C21A092860029E582 /* AppReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		9549679821A092670029E582 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		9549679921A0926C0029E582 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				9549679A21A0927D0029E582 /* AppState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95966F3D21A095B600EECD11 /* Keys.plist in Resources */,
 				9549678521A08D540029E582 /* LaunchScreen.storyboard in Resources */,
 				9549678221A08D540029E582 /* Assets.xcassets in Resources */,
 				9549678021A08D520029E582 /* Main.storyboard in Resources */,
@@ -135,8 +205,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9549679021A08DFA0029E582 /* NetworkManager.swift in Sources */,
 				9549677D21A08D520029E582 /* ViewController.swift in Sources */,
+				9549679B21A0927D0029E582 /* AppState.swift in Sources */,
+				9549679221A08E230029E582 /* EdmamAPI.swift in Sources */,
+				9549679521A0924A0029E582 /* SavedRecipesTableViewController.swift in Sources */,
 				9549677B21A08D520029E582 /* AppDelegate.swift in Sources */,
+				9549679D21A092860029E582 /* AppReducer.swift in Sources */,
+				9549678D21A08D6B0029E582 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
