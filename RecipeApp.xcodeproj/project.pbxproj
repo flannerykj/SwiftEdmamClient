@@ -8,21 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		9549677B21A08D520029E582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549677A21A08D520029E582 /* AppDelegate.swift */; };
-		9549677D21A08D520029E582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549677C21A08D520029E582 /* ViewController.swift */; };
-		9549678021A08D520029E582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9549677E21A08D520029E582 /* Main.storyboard */; };
 		9549678221A08D540029E582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9549678121A08D540029E582 /* Assets.xcassets */; };
 		9549678521A08D540029E582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9549678321A08D540029E582 /* LaunchScreen.storyboard */; };
 		9549678D21A08D6B0029E582 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549678C21A08D6B0029E582 /* Config.swift */; };
 		9549679021A08DFA0029E582 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549678F21A08DFA0029E582 /* NetworkManager.swift */; };
 		9549679221A08E230029E582 /* EdmamAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679121A08E230029E582 /* EdmamAPI.swift */; };
-		9549679521A0924A0029E582 /* SavedRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679421A0924A0029E582 /* SavedRecipesTableViewController.swift */; };
 		9549679B21A0927D0029E582 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679A21A0927D0029E582 /* AppState.swift */; };
 		9549679D21A092860029E582 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549679C21A092860029E582 /* AppReducer.swift */; };
 		95966F3D21A095B600EECD11 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95966F3C21A095B600EECD11 /* Keys.plist */; };
-		95966F3F21A0993D00EECD11 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F3E21A0993D00EECD11 /* AppRouter.swift */; };
-		95966F4121A099F700EECD11 /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4021A099F700EECD11 /* RoutingState.swift */; };
-		95966F4321A09A9400EECD11 /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4221A09A9400EECD11 /* RoutingReducer.swift */; };
-		95966F4521A09C1B00EECD11 /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4421A09C1B00EECD11 /* RoutingAction.swift */; };
+		95966F4121A099F700EECD11 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4021A099F700EECD11 /* NavigationState.swift */; };
+		95966F4321A09A9400EECD11 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4221A09A9400EECD11 /* NavigationReducer.swift */; };
+		95966F4521A09C1B00EECD11 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F4421A09C1B00EECD11 /* NavigationAction.swift */; };
+		95966F5421A0BDA300EECD11 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5321A0BDA300EECD11 /* RecipesTableViewController.swift */; };
+		95966F5621A0BDE700EECD11 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5521A0BDE700EECD11 /* TabBarController.swift */; };
+		95966F5821A0D68E00EECD11 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5721A0D68E00EECD11 /* AppRouter.swift */; };
+		95966F5A21A0DFF600EECD11 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5921A0DFF600EECD11 /* AuthViewController.swift */; };
+		95966F5C21A0E3B200EECD11 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5B21A0E3B200EECD11 /* LoadingViewController.swift */; };
 		F6CD827EE9E15DD2F0488367 /* Pods_RecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFB9646388BB2B0E58F4C90 /* Pods_RecipeApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,22 +33,23 @@
 		93DD8476309D194C283ED93E /* Pods-RecipeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeApp/Pods-RecipeApp.release.xcconfig"; sourceTree = "<group>"; };
 		9549677721A08D520029E582 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9549677A21A08D520029E582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9549677C21A08D520029E582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9549677F21A08D520029E582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9549678121A08D540029E582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9549678421A08D540029E582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9549678621A08D540029E582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9549678C21A08D6B0029E582 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9549678F21A08DFA0029E582 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9549679121A08E230029E582 /* EdmamAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdmamAPI.swift; sourceTree = "<group>"; };
-		9549679421A0924A0029E582 /* SavedRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewController.swift; sourceTree = "<group>"; };
 		9549679A21A0927D0029E582 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		9549679C21A092860029E582 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		95966F3C21A095B600EECD11 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		95966F3E21A0993D00EECD11 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		95966F4021A099F700EECD11 /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
-		95966F4221A09A9400EECD11 /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
-		95966F4421A09C1B00EECD11 /* RoutingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAction.swift; sourceTree = "<group>"; };
+		95966F4021A099F700EECD11 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		95966F4221A09A9400EECD11 /* NavigationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
+		95966F4421A09C1B00EECD11 /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
+		95966F5321A0BDA300EECD11 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
+		95966F5521A0BDE700EECD11 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		95966F5721A0D68E00EECD11 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		95966F5921A0DFF600EECD11 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		95966F5B21A0E3B200EECD11 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +96,10 @@
 			children = (
 				9549677A21A08D520029E582 /* AppDelegate.swift */,
 				9549678C21A08D6B0029E582 /* Config.swift */,
-				95966F3E21A0993D00EECD11 /* AppRouter.swift */,
+				95966F5721A0D68E00EECD11 /* AppRouter.swift */,
 				9549679621A092590029E582 /* Store */,
 				9549679321A092130029E582 /* View Controllers */,
 				9549678E21A08DE90029E582 /* Network */,
-				9549677C21A08D520029E582 /* ViewController.swift */,
-				9549677E21A08D520029E582 /* Main.storyboard */,
 				9549678121A08D540029E582 /* Assets.xcassets */,
 				9549678321A08D540029E582 /* LaunchScreen.storyboard */,
 				9549678621A08D540029E582 /* Info.plist */,
@@ -120,7 +120,10 @@
 		9549679321A092130029E582 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9549679421A0924A0029E582 /* SavedRecipesTableViewController.swift */,
+				95966F5B21A0E3B200EECD11 /* LoadingViewController.swift */,
+				95966F5921A0DFF600EECD11 /* AuthViewController.swift */,
+				95966F5521A0BDE700EECD11 /* TabBarController.swift */,
+				95966F5321A0BDA300EECD11 /* RecipesTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				9549679C21A092860029E582 /* AppReducer.swift */,
-				95966F4221A09A9400EECD11 /* RoutingReducer.swift */,
+				95966F4221A09A9400EECD11 /* NavigationReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -147,7 +150,7 @@
 		9549679821A092670029E582 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				95966F4421A09C1B00EECD11 /* RoutingAction.swift */,
+				95966F4421A09C1B00EECD11 /* NavigationAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -156,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				9549679A21A0927D0029E582 /* AppState.swift */,
-				95966F4021A099F700EECD11 /* RoutingState.swift */,
+				95966F4021A099F700EECD11 /* NavigationState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -232,7 +235,6 @@
 				95966F3D21A095B600EECD11 /* Keys.plist in Resources */,
 				9549678521A08D540029E582 /* LaunchScreen.storyboard in Resources */,
 				9549678221A08D540029E582 /* Assets.xcassets in Resources */,
-				9549678021A08D520029E582 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,15 +288,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95966F5621A0BDE700EECD11 /* TabBarController.swift in Sources */,
 				9549679021A08DFA0029E582 /* NetworkManager.swift in Sources */,
-				9549677D21A08D520029E582 /* ViewController.swift in Sources */,
-				95966F4321A09A9400EECD11 /* RoutingReducer.swift in Sources */,
+				95966F5421A0BDA300EECD11 /* RecipesTableViewController.swift in Sources */,
+				95966F5821A0D68E00EECD11 /* AppRouter.swift in Sources */,
+				95966F4321A09A9400EECD11 /* NavigationReducer.swift in Sources */,
 				9549679B21A0927D0029E582 /* AppState.swift in Sources */,
 				9549679221A08E230029E582 /* EdmamAPI.swift in Sources */,
-				95966F4121A099F700EECD11 /* RoutingState.swift in Sources */,
-				95966F3F21A0993D00EECD11 /* AppRouter.swift in Sources */,
-				9549679521A0924A0029E582 /* SavedRecipesTableViewController.swift in Sources */,
-				95966F4521A09C1B00EECD11 /* RoutingAction.swift in Sources */,
+				95966F5C21A0E3B200EECD11 /* LoadingViewController.swift in Sources */,
+				95966F4121A099F700EECD11 /* NavigationState.swift in Sources */,
+				95966F4521A09C1B00EECD11 /* NavigationAction.swift in Sources */,
+				95966F5A21A0DFF600EECD11 /* AuthViewController.swift in Sources */,
 				9549677B21A08D520029E582 /* AppDelegate.swift in Sources */,
 				9549679D21A092860029E582 /* AppReducer.swift in Sources */,
 				9549678D21A08D6B0029E582 /* Config.swift in Sources */,
@@ -304,14 +308,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9549677E21A08D520029E582 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9549677F21A08D520029E582 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9549678321A08D540029E582 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

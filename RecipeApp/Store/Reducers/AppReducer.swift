@@ -11,6 +11,6 @@ import ReSwift
 
 func appReducer(action: Action, appState: AppState?) -> AppState {
   return AppState(
-    routingState: routingReducer(action: action, state: appState?.routingState)
+    navigationState: navigationReducer(action: action, state: appState?.navigationState)
     )
 }

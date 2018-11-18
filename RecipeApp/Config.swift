@@ -15,6 +15,7 @@ struct Config {
     private static let plist = NSDictionary(contentsOfFile: Config.filePath!)
     
     // public config constants
+    static let appName = "RecipeApp"
     static let edmamEndpoint = "https://api.edamam.com"
     static let edmamAppId = plist?.object(forKey: "EDMAM_APP_ID") as! String
     static let edmamAppKey = plist?.object(forKey: "EDMAM_API_KEY") as! String

@@ -1,5 +1,5 @@
 //
-//  SavedRecipesTableViewController.swift
+//  RecipesTableViewController.swift
 //  RecipeApp
 //
 //  Created by Flannery Jefferson on 2018-11-17.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class SavedRecipesTableViewController: UITableViewController {
+class RecipesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
-        print("loaded saved recipes")
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations

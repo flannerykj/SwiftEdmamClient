@@ -1,5 +1,5 @@
 //
-//  Router.swift
+//  AppRouter.swift
 //  RecipeApp
 //
 //  Created by Flannery Jefferson on 2018-11-17.
@@ -7,32 +7,46 @@
 //
 
 import Foundation
-
+import UIKit
 import ReSwift
 
-enum RoutingDestination: String {
-    case savedRecipes = "SavedRecipesTableViewController"
+class NavigationNode {
+    let identifier: String
+    let controller: Controller
+    let parentNode: NavigationNode?
+    
+    var childNodes: [NavigationNode]?
+    var stack: [NavigationNode]?
+    
+    init(identifier: String, controller: Controller, parentNode: NavigationNode?) {
+        self.identifier = identifier
+        self.controller = controller
+        self.parentNode = parentNode
+    }
 }
 
+enum Controller: String, CaseIterable {
+    case AuthViewController, LoadingViewController
+}
+
+// MARK: AppRouter
 final class AppRouter {
-    
-    let navigationController: UINavigationController
+    let window: UIWindow
     
     init(window: UIWindow) {
-        navigationController = UINavigationController()
-        window.rootViewController = navigationController
-        // 1
+        self.window = window
         store.subscribe(self) {
             $0.select {
-                $0.routingState
+                $0.navigationState
             }
         }
+        setRoot(controller: .LoadingViewController)
     }
     
-    // 2
-    fileprivate func pushViewController(identifier: String, animated: Bool) {
-        let newVC = instantiateViewController(identifier: identifier)
-        let newVCType = type(of: newVC)
+    //
+    fileprivate func pushViewController(controller: Controller, animated: Bool) {
+        let newVC = instantiate(controller: controller)
+        /* let newVCType = type(of: newVC)
         let currentVCs = navigationController.viewControllers
         for vc in currentVCs {
             let vcType = type(of: vc)
@@ -41,23 +55,28 @@ final class AppRouter {
                 // navigationController.popToViewController(vc, animated: true)
                 return
             }
-        }
-        navigationController.pushViewController(newVC, animated: animated)
+        } */
+        // store.dispatch(navigate: newVC)
+        
     }
     
-    private func instantiateViewController(identifier: String) -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: identifier)
+    private func setRoot(controller: Controller) {
+        guard let newRoot = instantiate(controller: controller) else { return }
+        self.window.rootViewController = newRoot
+        self.window.makeKeyAndVisible()
+    }
+    
+    private func instantiate(controller: Controller) -> UIViewController? {
+        let vcClassName = "\(Config.appName).\(controller.rawValue)"
+        guard let vcClass = NSClassFromString(vcClassName) as? UIViewController.Type else { return nil }
+        return vcClass.init()
     }
 }
 
 // MARK: - StoreSubscriber
 // 3
 extension AppRouter: StoreSubscriber {
-    func newState(state: RoutingState) {
-        // 4
-        let shouldAnimate = navigationController.topViewController != nil
-        // 5
-        pushViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
+    func newState(state: NavigationState) {
+        
     }
 }

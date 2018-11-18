@@ -9,6 +9,7 @@
 import Foundation
 import ReSwift
 
-struct RoutingAction: Action {
-    let destination: RoutingDestination
+
+public enum NavigationAction: Action {
+
 }

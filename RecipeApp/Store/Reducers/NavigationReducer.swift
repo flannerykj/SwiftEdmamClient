@@ -10,13 +10,11 @@ import Foundation
 import ReSwift
 
 
-func routingReducer(action: Action, state: RoutingState?) -> RoutingState {
-    var state = state ?? RoutingState()
+func navigationReducer(action: Action, state: NavigationState?) -> NavigationState {
+    var state = state ?? NavigationState()
     
     // alter state according to the action dispatched
     switch action {
-    case let routingAction as RoutingAction:
-        state.navigationState = routingAction.destination
     default: break
     }
     
