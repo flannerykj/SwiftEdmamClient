@@ -1,5 +1,5 @@
 //
-//  RouterReducer.swift
+//  AuthReducer.swift
 //  RecipeApp
 //
 //  Created by Flannery Jefferson on 2018-11-17.
@@ -9,14 +9,12 @@
 import Foundation
 import ReSwift
 
-
-func navigationReducer(action: Action, state: NavigationState?) -> NavigationState {
-    var state = state ?? NavigationState()
-    
-    // alter state according to the action dispatched
+func authReducer(action: Action, state: AuthState?) -> AuthState {
+    var state = state ?? AuthState()
     switch action {
+    case _ as LoginSuccessAction:
+        state.isAuthenticated = true
     default: break
     }
-    
     return state
 }

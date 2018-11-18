@@ -1,5 +1,5 @@
 //
-//  RoutingAction.swift
+//  AuthState.swift
 //  RecipeApp
 //
 //  Created by Flannery Jefferson on 2018-11-17.
@@ -10,6 +10,10 @@ import Foundation
 import ReSwift
 
 
-public enum NavigationAction: Action {
-
+struct AuthState: StateType {
+    var isAuthenticated: Bool
+    
+    init() {
+        isAuthenticated = false
+    }
 }

@@ -5,11 +5,14 @@ PODS:
   - RealmSwift (3.11.0):
     - Realm (= 3.11.0)
   - ReSwift (4.0.1)
+  - ReSwiftRouter (0.6.0):
+    - ReSwift (~> 4.0.0)
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
   - RealmSwift
   - ReSwift
+  - ReSwiftRouter
   - SwiftKeychainWrapper
 
 SPEC REPOS:
@@ -17,14 +20,16 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - ReSwift
+    - ReSwiftRouter
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
   RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: b86ba1c288369a78722ec9a6f89d892cdecfdad4
+PODFILE CHECKSUM: 7d57b9928851943ee483cba10dd13fc2c85a0302
 
 COCOAPODS: 1.5.3

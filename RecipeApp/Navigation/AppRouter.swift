@@ -1,5 +1,5 @@
 //
-//  AppState.swift
+//  AppRouter.swift
 //  RecipeApp
 //
 //  Created by Flannery Jefferson on 2018-11-17.
@@ -7,10 +7,11 @@
 //
 
 import Foundation
-import ReSwift
 import ReSwiftRouter
 
-struct AppState: StateType {
-    let navigationState: NavigationState
-    let authState: AuthState
+
+class AppRouter {
+    init() {
+        
+    }
 }

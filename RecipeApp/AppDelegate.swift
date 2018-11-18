@@ -8,24 +8,35 @@
 
 import UIKit
 import ReSwift
+import ReSwiftRouter
 
-
-var store = Store<AppState>(reducer: appReducer, state: nil)
+var mainStore = Store<AppState>(
+    reducer: appReducer,
+    state: nil
+)
 
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var router: Router<AppState>!
     var window: UIWindow?
-    var appRouter: AppRouter?
+    var rootNav: Routable!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
-        window.makeKeyAndVisible()
-        appRouter = AppRouter(window: window)
         
+        let rootNav = TabBarController()
+        router = Router(store: mainStore, rootRoutable: RootRoutable(routable: rootNav)) {
+            $0.select {
+                $0.navigationState
+            }
+        }
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = rootNav
+        window?.makeKeyAndVisible()
+        
+
         return true
     }
 

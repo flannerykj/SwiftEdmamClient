@@ -8,9 +8,12 @@
 
 import Foundation
 import ReSwift
+import ReSwiftRouter
 
-func appReducer(action: Action, appState: AppState?) -> AppState {
-  return AppState(
-    navigationState: navigationReducer(action: action, state: appState?.navigationState)
+
+func appReducer(action: Action, state: AppState?) -> AppState {
+    return AppState(
+        navigationState: NavigationReducer.handleAction(action, state: state?.navigationState),
+        authState: authReducer(action: action, state: state?.authState)
     )
 }
