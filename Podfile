@@ -6,6 +6,7 @@ target 'RecipeApp' do
   use_frameworks!
   pod 'RealmSwift'
   pod 'ReSwift'
+  pod 'SwiftKeychainWrapper'
   # Pods for RecipeApp
 
 end

@@ -24,6 +24,7 @@
 		95966F5821A0D68E00EECD11 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5721A0D68E00EECD11 /* AppRouter.swift */; };
 		95966F5A21A0DFF600EECD11 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5921A0DFF600EECD11 /* AuthViewController.swift */; };
 		95966F5C21A0E3B200EECD11 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5B21A0E3B200EECD11 /* LoadingViewController.swift */; };
+		95966F5F21A0E88100EECD11 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95966F5E21A0E88100EECD11 /* KeychainHelper.swift */; };
 		F6CD827EE9E15DD2F0488367 /* Pods_RecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFB9646388BB2B0E58F4C90 /* Pods_RecipeApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		95966F5721A0D68E00EECD11 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		95966F5921A0DFF600EECD11 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		95966F5B21A0E3B200EECD11 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		95966F5E21A0E88100EECD11 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				9549678321A08D540029E582 /* LaunchScreen.storyboard */,
 				9549678621A08D540029E582 /* Info.plist */,
 				95966F3C21A095B600EECD11 /* Keys.plist */,
+				95966F5D21A0E87000EECD11 /* Helpers */,
 			);
 			path = RecipeApp;
 			sourceTree = "<group>";
@@ -162,6 +165,14 @@
 				95966F4021A099F700EECD11 /* NavigationState.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		95966F5D21A0E87000EECD11 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				95966F5E21A0E88100EECD11 /* KeychainHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F50B760F6FD2A3A3AE1C0FA5 /* Frameworks */ = {
@@ -269,12 +280,14 @@
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -301,6 +314,7 @@
 				95966F5A21A0DFF600EECD11 /* AuthViewController.swift in Sources */,
 				9549677B21A08D520029E582 /* AppDelegate.swift in Sources */,
 				9549679D21A092860029E582 /* AppReducer.swift in Sources */,
+				95966F5F21A0E88100EECD11 /* KeychainHelper.swift in Sources */,
 				9549678D21A08D6B0029E582 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
